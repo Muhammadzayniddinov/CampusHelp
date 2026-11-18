@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CampusHelp | Student Service Request Portal</title>
+<style>
+:root{--navy:#14223b;--blue:#315de5;--bg:#f5f7fc;--ink:#18223a;--muted:#65718a;--line:#e4e9f2;--green:#098764}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 Inter,system-ui,-apple-system,Segoe UI,sans-serif}
+header{background:white;box-shadow:0 3px 22px #14223b10;position:sticky;top:0;z-index:1}
+.top{max-width:1130px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:25px;padding:18px 24px}
+.logo{font-weight:800;font-size:21px;letter-spacing:-.7px;color:var(--navy)}.logo span{color:var(--blue)}
+nav{display:flex;flex-wrap:wrap;gap:6px}nav button{border:0;border-radius:9px;background:transparent;padding:10px 13px;color:#52617c;cursor:pointer;font:inherit;font-weight:650}
+nav button.active{background:#eaf0ff;color:#294dc0}
+main{max-width:1130px;padding:36px 24px 55px;margin:auto}
+.eyebrow{color:var(--blue);text-transform:uppercase;letter-spacing:2.2px;font-size:11px;font-weight:800}
+h1{font-size:clamp(32px,5vw,48px);line-height:1.15;letter-spacing:-1.8px;margin:12px 0 16px}
+h2{font-size:22px;line-height:1.3;letter-spacing:-.4px;margin:4px 0 11px}
+p{color:var(--muted);margin:7px 0 19px}.hero{display:grid;grid-template-columns:1.45fr 1fr;gap:38px;align-items:center;margin-bottom:34px}
+.art{background:linear-gradient(145deg,#244ac6,#7693ef);min-height:175px;border-radius:22px;display:flex;align-items:end;justify-content:start;color:white;padding:30px;font-size:29px;font-weight:800;line-height:1.2;box-shadow:0 18px 35px #2849b82f}
+.grid{display:grid;grid-template-columns:1.6fr 1fr;gap:22px}.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:29px;box-shadow:0 7px 24px #18223a08}
+label{display:block;font-weight:670;font-size:13px;margin-bottom:7px}.two{display:grid;grid-template-columns:1fr 1fr;gap:17px}.field{margin:13px 0 18px}
+input,select,textarea{width:100%;background:#fff;border:1px solid #cbd4e3;border-radius:9px;padding:12px;font:inherit;color:var(--ink)}
+textarea{resize:vertical;min-height:114px}input:focus,select:focus,textarea:focus{outline:3px solid #dce5ff;border-color:var(--blue)}
+button.primary,button.outline{border-radius:10px;font:inherit;font-weight:700;padding:12px 19px;cursor:pointer}
+button.primary{border:1px solid var(--blue);background:var(--blue);color:#fff}button.outline{border:1px solid #cbd4e3;background:white;color:#263c69}
+.row{display:flex;align-items:center;flex-wrap:wrap;gap:12px}.hidden{display:none!important}
+.notice{border-radius:12px;background:#f3f6fd;border:1px solid #dce6ff;padding:15px;color:#385070;font-size:13px}
+.alert{padding:14px;margin:14px 0;border-radius:10px;background:#e8f8f1;color:#086e53;border:1px solid #b9edda}
+.alert.bad{background:#fff1f1;border-color:#ffd0d0;color:#b42828}
+.kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 0 22px}
+.metric{background:white;border-radius:13px;padding:19px;border:1px solid var(--line);font-size:26px;font-weight:800}
+.metric span{display:block;font-size:13px;color:var(--muted);font-weight:600}
+table{border-collapse:collapse;width:100%;font-size:12px}th,td{padding:11px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle;word-break:break-word}th{font-size:11px;color:var(--muted);background:#f9faff}
+td select{font-size:12px;padding:7px;min-width:112px}.tablewrap{overflow-x:auto}.id{color:#345fdf;font-weight:730}
+.badge{display:inline-block;background:#e7efff;color:#3259b4;padding:4px 9px;border-radius:99px;font-size:12px;font-weight:750}
+.steps{padding-left:20px;color:#55657d}.steps li{padding:0 0 14px}
+.muted{color:var(--muted);font-size:13px}footer{max-width:1130px;margin:10px auto 24px;padding:0 24px;color:#8b96a9;font-size:12px}
+@media(max-width:800px){.hero,.grid{grid-template-columns:1fr}.two{grid-template-columns:1fr}.art{display:none}main{padding:26px 15px}.card{padding:20px}.top{align-items:start;flex-direction:column;gap:7px}.kpi{grid-template-columns:1fr}}
+</style></head>
+<body><header><div class="top"><div class="logo"><span>✦</span> CampusHelp</div>
+<nav aria-label="Main navigation"><button class="active" data-tab="submit">Submit Request</button><button data-tab="track">Track Request</button><button data-tab="admin">Admin Dashboard</button></nav></div></header>
+<main>
+<section id="submit" class="page">
+<div class="hero"><div><div class="eyebrow">University student services</div><h1>Support for every part of campus.</h1><p>Report an issue, receive a reference number, and follow its progress from one place.</p></div><div class="art">One place.<br>Every request.</div></div>
+<div class="grid"><div class="card"><div class="eyebrow">New request</div><h2>How can we help?</h2>
+<form id="new-form" novalidate><div class="two"><div class="field"><label for="student">Student ID *</label><input id="student" required minlength="3" maxlength="30" placeholder="STU-DEMO-001"></div>
+<div class="field"><label for="category">Request category *</label><select id="category" required><option value="">Choose a category</option><option>IT Support</option><option>Classroom Maintenance</option><option>Library Assistance</option><option>Administrative Services</option></select></div></div>
+<div class="field"><label for="priority">Priority *</label><select id="priority" required><option value="">Choose a priority</option><option>Low</option><option>Medium</option><option>High</option></select></div>
+<div class="field"><label for="description">Description *</label><textarea id="description" minlength="10" required placeholder="Describe your service request in at least 10 characters"></textarea></div>
+<div id="form-error" class="alert bad hidden" role="alert"></div><button class="primary" type="submit">Submit Request</button></form>
+<div id="submitted" class="alert hidden"><strong>Request submitted successfully.</strong><div>Your tracking ID: <strong id="new-id"></strong></div><button class="outline" id="track-new">Track this request</button> <button class="outline" id="submit-another">Submit another</button></div></div>
+<aside class="card"><h2>How it works</h2><ol class="steps"><li><strong>Submit</strong><br>Choose category and priority.</li><li><strong>Get an ID</strong><br>Save the generated tracking reference.</li><li><strong>Track progress</strong><br>See Open, In Progress and Completed status.</li></ol><div class="notice"><strong>Academic prototype.</strong> Data stays in this browser using localStorage. There is no real authentication, backend or email delivery. Use fictional student IDs only.</div></aside></div></section>
+<section id="track" class="page hidden"><div class="eyebrow">My requests</div><h1>Track your request.</h1><p>Look up the unique ID generated after submission.</p>
+<div class="card"><form id="track-form"><div class="field"><label for="lookup">Tracking ID</label><input id="lookup" placeholder="CH-YYYYMMDD-XXXXXXXX" required></div><button class="primary">Look up request</button></form>
+<div id="track-result" class="hidden"><h2 id="r-id"></h2><div id="r-status" class="badge"></div><p id="r-info"></p><p id="r-desc"></p><p id="r-updated" class="muted"></p></div><div id="track-error" class="alert bad hidden"></div></div></section>
+<section id="admin" class="page hidden"><div class="eyebrow">Operations center</div><h1>Admin dashboard.</h1><p>Assign service requests and update their status in this browser-only demonstration.</p>
+<div class="kpi"><div class="metric"><span>Open requests</span><div id="k-open">0</div></div><div class="metric"><span>In progress</span><div id="k-progress">0</div></div><div class="metric"><span>Completed</span><div id="k-done">0</div></div></div>
+<div class="card"><div class="row"><h2 style="margin-right:auto">Service requests</h2><button class="outline" id="seed">Add 3 demo requests</button><button class="outline" id="clear">Clear local demo data</button></div><div id="admin-message" class="muted"></div>
+<div class="tablewrap"><table><thead><tr><th>ID</th><th>Category</th><th>Priority</th><th>Student</th><th>Assign to</th><th>Status</th></tr></thead><tbody id="rows"></tbody></table></div><p id="empty" class="muted">No requests yet. Submit a request or add fictional demo data.</p></div></section>
+</main><footer>CampusHelp · GitHub-Based Project Management Assignment · Individual academic demonstration</footer>
+<script>
+(function(){
+'use strict';
+var KEY='campushelp-solo-requests-v2';
+var categories=['IT Support','Classroom Maintenance','Library Assistance','Administrative Services'],priorities=['Low','Medium','High'],statuses=['Open','In Progress','Completed'],teams=['Unassigned','IT Support Team','Maintenance Team','Library Desk','Administration Office'];
+function el(id){return document.getElementById(id)}
+function read(){try{var x=JSON.parse(localStorage.getItem(KEY)||'[]');return Array.isArray(x)?x:[]}catch(e){return []}}
+function save(rows){localStorage.setItem(KEY,JSON.stringify(rows))}
+function newid(){var d=new Date(),str=''+d.getFullYear()+String(d.getMonth()+1).padStart(2,'0')+String(d.getDate()).padStart(2,'0');var random=(window.crypto&&crypto.randomUUID?crypto.randomUUID().replace(/-/g,'').slice(0,8):Math.random().toString(36).slice(2,10)).toUpperCase();return 'CH-'+str+'-'+random}
+function escapeText(v){return document.createTextNode(String(v))}
+function tab(name){document.querySelectorAll('.page').forEach(function(e){e.classList.toggle('hidden',e.id!==name)});document.querySelectorAll('nav button').forEach(function(e){e.classList.toggle('active',e.dataset.tab===name)});if(name==='admin')render();window.scrollTo(0,0)}
+document.querySelectorAll('nav button').forEach(function(b){b.addEventListener('click',function(){tab(b.dataset.tab)})});
+el('new-form').addEventListener('submit',function(ev){ev.preventDefault();el('form-error').classList.add('hidden');var id=el('student').value.trim(),cat=el('category').value,pri=el('priority').value,descr=el('description').value.trim();
+var error=id.length<3||id.length>30?'Student ID must be 3-30 characters.':!categories.includes(cat)?'Choose a valid category.':!priorities.includes(pri)?'Choose a priority.':descr.length<10?'Description needs at least 10 characters.':'';
+if(error){el('form-error').textContent=error;el('form-error').classList.remove('hidden');return}
+var list=read(),rid=newid();while(list.some(function(r){return r.id===rid}))rid=newid();
+list.unshift({id:rid,studentId:id,category:cat,priority:pri,description:descr,status:'Open',assignedTo:'Unassigned',createdAt:new Date().toISOString(),updatedAt:new Date().toISOString()});
+try{save(list);el('new-id').textContent=rid;el('new-form').classList.add('hidden');el('submitted').classList.remove('hidden')}catch(e){el('form-error').textContent='Browser storage is unavailable.';el('form-error').classList.remove('hidden')}
+});
+el('submit-another').addEventListener('click',function(){el('new-form').reset();el('new-form').classList.remove('hidden');el('submitted').classList.add('hidden')});
+el('track-new').addEventListener('click',function(){el('lookup').value=el('new-id').textContent;tab('track');show()});
+function show(){el('track-error').classList.add('hidden');el('track-result').classList.add('hidden');var requested=el('lookup').value.trim().toUpperCase();var row=read().find(function(x){return x.id.toUpperCase()===requested});
+if(!row){el('track-error').textContent='Request not found in this browser. Check the ID or browser profile.';el('track-error').classList.remove('hidden');return}
+el('r-id').textContent=row.id;el('r-status').textContent=row.status;el('r-info').textContent=row.category+' · '+row.priority+' priority · assigned: '+row.assignedTo;el('r-desc').textContent=row.description;el('r-updated').textContent='Updated '+new Date(row.updatedAt).toLocaleString();el('track-result').classList.remove('hidden')}
+el('track-form').addEventListener('submit',function(e){e.preventDefault();show()});
+function makeSelect(vals,selected,onChange){var s=document.createElement('select');vals.forEach(function(v){var o=document.createElement('option');o.value=v;o.textContent=v;s.appendChild(o)});s.value=selected;s.addEventListener('change',function(){onChange(s.value)});return s}
+function render(){var list=read();el('k-open').textContent=list.filter(function(r){return r.status==='Open'}).length;el('k-progress').textContent=list.filter(function(r){return r.status==='In Progress'}).length;el('k-done').textContent=list.filter(function(r){return r.status==='Completed'}).length;var tbody=el('rows');tbody.replaceChildren();el('empty').classList.toggle('hidden',list.length>0);
+list.forEach(function(r){var tr=document.createElement('tr');[r.id,r.category,r.priority,r.studentId].forEach(function(txt,i){var td=document.createElement('td');if(i===0)td.className='id';td.appendChild(escapeText(txt));tr.appendChild(td)});
+var assigned=document.createElement('td');assigned.appendChild(makeSelect(teams,r.assignedTo,function(v){change(r.id,'assignedTo',v)}));tr.appendChild(assigned);
+var status=document.createElement('td');status.appendChild(makeSelect(statuses,r.status,function(v){change(r.id,'status',v)}));tr.appendChild(status);tbody.appendChild(tr)})}
+function change(id,field,value){var list=read(),r=list.find(function(r){return r.id===id});if(!r)return;r[field]=value;r.updatedAt=new Date().toISOString();save(list);el('admin-message').textContent='Saved changes for '+id;render()}
+el('seed').addEventListener('click',function(){var list=read();[['IT Support','High','Laptop does not connect to campus Wi-Fi.'],['Library Assistance','Low','Need help locating a textbook for the course.'],['Classroom Maintenance','Medium','The projector is not working in the classroom.']].forEach(function(x,i){list.unshift({id:newid(),studentId:'STU-DEMO-'+(i+1),category:x[0],priority:x[1],description:x[2],status:'Open',assignedTo:'Unassigned',createdAt:new Date().toISOString(),updatedAt:new Date().toISOString()})});save(list);render()});
+el('clear').addEventListener('click',function(){if(confirm('Delete all locally stored demo requests?')){save([]);render()}});
+window.CampusHelpTest={read:read,tab:tab,show:show};
+})();
+</script></body></html>
