@@ -50,3 +50,9 @@ The editable Word report provided in chat contains image/evidence slots. Insert 
 - All **seven test cases** now have screenshot-supported Pass outcomes. See [executed test plan](https://github.com/Muhammadzayniddinov/CampusHelp/blob/main/docs/test-plan.md) and [evidence log](https://github.com/Muhammadzayniddinov/CampusHelp/blob/main/reports/2026-11-19-prototype-browser-evidence.md).
 - [Testing Issue #9](https://github.com/Muhammadzayniddinov/CampusHelp/issues/9) was closed after linking actual evidence. Latest mandatory-task status: **3 of 12 closed (25%)** (#1, #2, #9), nine open. Earlier Board screenshot still correctly depicts its own earlier 2/12 snapshot.
 - Still missing for full academic submission: actual hours, real Issues/PR screenshots, monitoring checkpoints, final verification and closure records. Do not substitute estimated hours for observed work hours.
+
+## Issues-list screenshot received on 19 November 2026
+- Student supplied an authentic screenshot from [CampusHelp Issues](https://github.com/Muhammadzayniddinov/CampusHelp/issues) with `Muhammadzayniddinov / CampusHelp` visible.
+- Screenshot shows **10 open / 3 closed total Issues**, with the open set including **CR-01 #14** alongside nine mandatory task Issues. The three closed mandatory Issues are **#1, #2, #9**, confirmed separately through GitHub.
+- The screenshot also visibly shows task titles, labels, milestone tags and repository account. It was incorporated into the evolving report as an authentic **19 November snapshot**, not as a retrospective Day 2/5/8 capture.
+- The Issues screenshot does not substitute for a screenshot of [merged PR #13](https://github.com/Muhammadzayniddinov/CampusHelp/pull/13), actual work-hour logs or final project closure.
