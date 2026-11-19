@@ -21,6 +21,7 @@
 
 ## Not yet present / not verified
 - Four repository milestones now exist: M1 19 Nov, M2 23 Nov, M3 26 Nov, M4 1 Dec 2026. All T01–T12 Issues are assigned to M1–M4. [Milestones](https://github.com/Muhammadzayniddinov/CampusHelp/milestones).
+- The [GitHub Project Table](https://github.com/users/Muhammadzayniddinov/projects/1/views/2) contains five required custom fields; a real screenshot dated 19 Nov shows Priority and Estimated Hours values across twelve mandatory-task rows (nine × 4h plus three × 3h = 45 planned hours). The row titles are off-screen in the capture, so precise task mapping needs visible confirmation. Actual Hours and dates remain unfilled. **Roadmap not yet verified.**
 - The [GitHub Project Board](https://github.com/users/Muhammadzayniddinov/projects/1/views/1) now exists with all 12 mandatory Issues and additional CR-01 (#14). As shown in the genuine 19 Nov screenshot: 9 Todo, 2 In Progress (T05/T06), 2 Done (T01/T02). **Table, Roadmap and custom fields remain pending**.
 - Historical Day 2/5/8 monitoring screenshots remain pending; a genuine 19 Nov board screenshot is captured in the chat report.
 - Actual browser test results and results screenshots.
