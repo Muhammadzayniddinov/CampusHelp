@@ -1,6 +1,6 @@
 # Live Evidence Ledger — CampusHelp (Individual Assignment)
 
-**Last checked:** 18 November 2026 (GitHub authenticated as `Muhammadzayniddinov`).  
+**Last checked:** 19 November 2026 (GitHub authenticated as `Muhammadzayniddinov`).  
 **Integrity rule:** these are *real links and current facts*, not replacements for screenshots and not simulated prior-day checkpoints.
 
 ## Verified live GitHub evidence
@@ -20,19 +20,19 @@
 - Three **actual, dated** AI-assisted progress notes: Issues #1, #7 and #10 on 18 November 2026.
 
 ## Not yet present / not verified
-- Actual repository milestones M1–M4 and due dates.
-- GitHub Project with Board, Table and Roadmap views, configured field metadata and task assignment.
-- Historical Day 2/5/8 monitoring screenshots.
+- Four repository milestones now exist: M1 19 Nov, M2 23 Nov, M3 26 Nov, M4 1 Dec 2026. All T01–T12 Issues are assigned to M1–M4. [Milestones](https://github.com/Muhammadzayniddinov/CampusHelp/milestones).
+- The [GitHub Project Board](https://github.com/users/Muhammadzayniddinov/projects/1/views/1) now exists with all 12 mandatory Issues and additional CR-01 (#14). As shown in the genuine 19 Nov screenshot: 9 Todo, 2 In Progress (T05/T06), 2 Done (T01/T02). **Table, Roadmap and custom fields remain pending**.
+- Historical Day 2/5/8 monitoring screenshots remain pending; a genuine 19 Nov board screenshot is captured in the chat report.
 - Actual browser test results and results screenshots.
 - Independent peer review, which is not applicable to a solo submission without an explicit lecturer replacement.
-- Confirmed actual effort/time logs, verified milestone closure and complete final report.
+- At the 19 Nov check, #1/#2 of the twelve mandatory Issues were closed (2/12 = 16.7%), and the rest remained open. Real actual effort/time logs and final closure evidence remain pending.
 
 ## Authentic screenshot instructions
 To capture each screenshot, open the **real GitHub website** signed into your account and include the URL bar or repository breadcrumb. Do not crop out owner identity:
 1. Repository home at https://github.com/Muhammadzayniddinov/CampusHelp
 2. All Issues with 12 T01–T12 records at /issues (optional filter `is:issue`)
-3. GitHub milestones page with the four real calendar due dates.
-4. Board showing real Todo/In Progress/Done cards; separate Board state snapshots only when captured on those actual days.
+3. [GitHub milestones](https://github.com/Muhammadzayniddinov/CampusHelp/milestones) page with four verified due dates (screenshot already captured).
+4. [Live Board](https://github.com/users/Muhammadzayniddinov/projects/1/views/1) showing real Todo/In Progress/Done cards (genuine 19 Nov screenshot captured). Separate Board state snapshots only when captured on the actual day.
 5. Project Table with owner, priorities, estimates, actuals and dates, plus Roadmap.
 6. PR #13 showing author and merged status.
 7. CR-01 Issue #14 with `change-request` label.
