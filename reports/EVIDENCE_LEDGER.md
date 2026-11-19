@@ -56,3 +56,9 @@ The editable Word report provided in chat contains image/evidence slots. Insert 
 - Screenshot shows **10 open / 3 closed total Issues**, with the open set including **CR-01 #14** alongside nine mandatory task Issues. The three closed mandatory Issues are **#1, #2, #9**, confirmed separately through GitHub.
 - The screenshot also visibly shows task titles, labels, milestone tags and repository account. It was incorporated into the evolving report as an authentic **19 November snapshot**, not as a retrospective Day 2/5/8 capture.
 - The Issues screenshot does not substitute for a screenshot of [merged PR #13](https://github.com/Muhammadzayniddinov/CampusHelp/pull/13), actual work-hour logs or final project closure.
+
+## PR #13 screenshots supplied on 19 November 2026
+- The student provided three authentic GitHub screenshots of [Pull Request #13](https://github.com/Muhammadzayniddinov/CampusHelp/pull/13), included in the updated PDF report.
+- Visible in the screenshots: repository **Muhammadzayniddinov/CampusHelp**, author/merger **Muhammadzayniddinov**, **Merged** badge, feature branch `feature/campushelp-prototype` merged into `main`, **14 commits** and **14 changed files**, and the confirmation message **Pull request successfully merged and closed**.
+- The screenshot also explicitly shows **No reviews**. As this is an individual assignment, no independent peer review is claimed. If the lecturer requires peer-review replacement evidence, the student must agree a permissible adaptation with the lecturer.
+- These screenshots corroborate a real PR and version history; they are not proof of independent review or of Day 2/5/8 checkpoint status.
